@@ -1,0 +1,516 @@
+select distinct formats from files group by formats order by count ( * ) desc limit 1 
+"select distinct count ( t1.paperid ) , t3.authorid from paperkeyphrase as t1 join keyphrase as t2 on t1.keyphraseid = t2.keyphraseid join paper as t3 on t3.paperid = t2.paperid join writes as t4 on t3.paperid = t4.paperid join author as t1 on t4.authorid = t1.authorid where t1.authorname = "
+select t1.name from airports as t1 join routes as t2 on t1.apid = t2.src_apid group by t1.name order by count ( * ) desc limit 1 
+select count ( * ) from documents_with_expenses where document_type_code = 
+select name from technician order by age asc 
+"select t2.date_of_enrolment , count ( * ) from student_course_enrolment as t1 join student_course_enrolment as t2 on t1.course_id = t2.course_id group by t1.student_id "
+"select sum ( enrollment ) , avg ( enrollment ) from university where founded = VALUE_0 "
+select count ( * ) from lessons as t1 join customers as t2 on t1.customer_id = t2.customer_id where t2.first_name = 
+"select t1.driverid , t1.surname from drivers as t1 join results as t2 on t1.driverid = t2.driverid group by t1.driverid having count ( * ) >= 2 "
+"select distinct t1.authorid , t3.paperid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.authorname = "
+select * from documents_with_expenses where document_type_code = 
+"select t1.theme , count ( * ) from exhibition as t1 join exhibition as t2 on t1.exhibition_id = t2.exhibition_id group by t1.artist_id "
+select t1.city_town from customers as t1 join customers as t2 on t1.customer_id = t2.customer_id group by t1.city_town 
+select count ( distinct location ) from perpetrator 
+select count ( * ) from program 
+"select fname , lname from student where stuid in ( select stuid from student group by student_capacity desc limit 1 "
+select count ( * ) from faculty where sex = 
+select highest_elevation from highlow where state_name = 
+"select t1.firstname , t1.lastname from performance as t1 join band as t2 on t1.bandmate = t2.id where t2.firstname = "
+select t2.name from friend as t1 join highschooler as t2 on t1.student_id = t2.id where grade = VALUE_0 
+"select t2.house_number , t1.name from restaurant as t1 join location as t2 on t1.id = t2.restaurant_id where t2.city_name = "
+select dept_name from department group by emp_jobcode order by count ( * ) desc limit 1 
+select distinct t1.keyphraseid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select id from course except select course_id from prereq 
+select name from shop where shop_id not in ( select shop_id from hiring ) 
+select id from course except select course_id from prereq 
+select t1.name from news_report as t1 join event as t2 on t1.event_id = t2.event_id join journalist as t3 on t1.journalist_id = t3.journalist_id where t3.event_attendance = VALUE_0 
+select population from state where state_name = 
+select name from county_public_safety order by name asc 
+select region_name from member where party_id not in ( select party from party ) 
+"select t1.grant_amount , t2.organisation_id from grants as t1 join grants as t2 on t1.organisation_id = t2.project_id where t2.outcome_code = VALUE_0 "
+"select t1.organisation_type , t1.organisation_details from organisations as t1 join research_staff as t2 on t1.organisation_id = t2.employer_organisation_id group by t1.organisation_id order by count ( * ) desc limit 1 "
+select avg ( age ) from student where stuid not in ( select stuid from has_pet ) 
+"select project_id , project_details from projects "
+select distinct journalid from paper where year = VALUE_0 
+select distinct t1.customer_name from customers as t1 join orders as t2 on t1.customer_id = t2.customer_id where t2.order_status = VALUE_0 
+"select first_name , birth_date from players order by birth_date "
+"select t2.name , t2.name from wedding as t1 join people as t2 on t1.male_id = t2.people_id where t1.year = VALUE_0 "
+select name from races order by date desc limit 1 
+"select t1.name , t1.age from pilot as t1 join match as t2 on t1.aircraft_id = t2.winning_pilot group by t1.id having count ( * ) >= 2 "
+select avg ( rating ) from review where year < VALUE_0 
+select river_name from river where length = ( select max ( length ) from river ) 
+"select count ( * ) , t1.name from products as t1 join manufacturers as t2 on t1.manufacturer = t2.code group by t2.name "
+select count ( distinct party_name ) from party_events as t1 join party as t2 on t1.party = t2.party_id where t1.party_name = 
+select distinct range from mountain order by height desc 
+"select t2.first_name , t1.last_name from film as t1 join inventory as t2 on t1.film_id = t2.film_id group by t2.film_id order by count ( * ) desc limit 1 "
+select t1.airline from airlines as t1 join flights as t2 on t1.uid = t2.airline where t2.airline = VALUE_0 or t2.sourceairport = VALUE_1 
+select count ( distinct facid ) from faculty_participates_in as t1 join faculty as t2 on t1.facid = t2.facid where t2.fname = 
+select founded from university order by founded limit 1 
+select t2.name from organization as t2 join author as t1 on t2.oid = t1.oid where t1.name = 
+select count ( * ) from airports 
+select airportname from airports where airportcode = VALUE_0 
+select count ( * ) from flight where distance between VALUE_0 and VALUE_1 
+"select count ( * ) , t1.name from airports as t1 join routes as t2 on t1.apid = t2.src_apid group by t1.name having count ( * ) >= 2 "
+select t1.name from employee as t1 join certificate as t2 on t1.eid = t2.eid where t2.name = 
+select t1.title from authors as t1 join authorship as t2 on t1.authid = t2.authid join papers as t3 on t2.paperid = t3.paperid where t1.fname = 
+select state from customers where first_name = 
+select distinct product_size from customers where customer_id = 
+select count ( * ) from elimination where location = 
+select count ( * ) from airports where city = 
+"select t2.name , t2.age from school_bus as t1 join school as t2 on t1.school_id = t2.school_id "
+select t2.title from customer as t1 join rental as t2 on t1.customer_id = t2.customer_id where t1.first_name = 
+select distinct t3.paperid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+"select t1.fname , t1.lname from participates_in as t1 join participates_in as t2 on t1.stuid = t2.stuid where t2.sex = "
+"select t1.name , t1.budget from student as t1 join takes as t2 on t1.id = t2.id join student as t3 on t2.s_id = t3.id where t3.year = VALUE_0 "
+select t1.employee_id from employees as t1 join jobs as t2 on t1.location_id = t2.location_id where t1.first_name = VALUE_0 or t2.last_name = VALUE_1 
+select distinct t3.paperid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select nickname from school_details where division not in ( select school_id from school ) 
+"select distinct t1.authorid , t3.paperid from paperkeyphrase as t2 join keyphrase as t5 on t2.keyphraseid = t5.keyphraseid join paper as t3 on t3.paperid = t2.paperid join writes as t4 on t4.paperid = t3.paperid join author as t1 on t4.authorid = t1.authorid where t2.authorname = "
+select t2.employee_name from employees as t1 join roles as t2 on t1.role_code = t2.role_code group by t1.location_code having count ( * ) >= VALUE_0 
+"select t2.stu_fname , avg ( t1.stu_gpa ) from student as t1 join professor as t2 on t1.dept_code = t2.dept_code group by t1.dept_code having count ( * ) > 1 "
+"select product_type_code , avg ( amount_outstanding ) from payments group by product_type_code "
+select distinct t1.authorid from paperkeyphrase as t3 join keyphrase as t4 on t3.keyphraseid = t4.keyphraseid join writes as t3 on t4.paperid = t3.paperid join author as t1 on t4.authorid = t1.authorid where t2.authorname = 
+select count ( distinct title ) from vocals as t1 join songs as t2 on t1.songid = t2.songid where t2.title = VALUE_0 
+select name from person where city = 
+"select main_industry , count ( * ) from company group by main_industry "
+select airportname from airports where airportcode = VALUE_0 
+"select t1.name , count ( * ) from film as t1 join inventory as t2 on t1.film_id = t2.film_id group by t1.film_id order by count ( * ) desc limit 1 "
+select count ( * ) from products as t1 join product_characteristics as t2 on t1.product_id = t2.product_id where t2.product_name = VALUE_0 
+select name from stadium except select t2.name from concert as t1 join singer as t2 on t1.singer_id = t2.singer_id 
+"select t2.white , t2.crime_rate from county_public_safety as t1 join county_public_safety as t2 on t1.county_id = t2.county_id "
+select t3.name from written_by as t3 join directed_by as t1 on t2.did = t1.msid join movie as t3 on t3.mid = t2.msid where t1.name = 
+"select winner_name , winner_rank_points from matches order by winner_rank_points desc limit 3 "
+select name from player where points > ( select avg ( points ) from player ) 
+"select max ( age ) , min ( age ) from music_festival "
+select position from match_season group by college order by count ( * ) desc limit 1 
+select stuid from student except select stuid from student where sex = 
+select border from border_info where state_name = 
+select count ( * ) from customers where customer_id not in ( select product_id from complaints ) 
+"select occupation , residence from player "
+select t2.payment_method from customers as t1 join customer_orders as t2 on t1.customer_id = t2.customer_id where t2.order_status = VALUE_0 
+select name from singer where citizenship != VALUE_0 
+select avg ( age ) from artist 
+select t1.state from owners as t1 join dogs as t2 on t1.owner_id = t2.owner_id where t2.first_name = 
+select template_type_code from templates group by template_type_code having count ( * ) >= 2 
+"select t2.house_number , t1.name from restaurant as t1 join location as t2 on t1.id = t2.restaurant_id where t2.city_name = "
+select name from manufacturers where revenue > ( select avg ( revenue ) from manufacturers where headquarter = 
+select author from paper where year = VALUE_0 
+"select name , distance from aircraft where distance > VALUE_0 select min ( distance ) from aircraft ) "
+"select customer_phone , premise_details from customers where customer_address like "
+select t2.source_system_code from customer_master_index as t1 join cmi_cross_references as t2 on t1.master_customer_id = t2.master_customer_id where t2.cmi_details = VALUE_0 
+select product_id from shipments where shipment_date > VALUE_0 
+"select t2.first_name , t1.last_name , t1.last_name from owners as t1 join dogs as t2 on t1.owner_id = t2.owner_id "
+"select count ( t2.fastestlapspeed ) , t1.driverid from drivers as t1 join results as t2 on t1.driverid = t2.driverid where t1.year = VALUE_0 "
+select count ( * ) from accounts 
+select count ( * ) from scientists where ssn not in ( select scientist from assignedto ) 
+"select t1.name , t1.age from visitor as t1 join visit as t2 on t1.museum_id = t2.visitor_id group by t1.name "
+"select payment_method_code , count ( * ) from addresses group by state_province_county "
+"select t1.country , t1.countryname from countries as t1 join car_makers as t2 on t1.countryid = t2.continent group by t1.countryid having count ( * ) >= 2 "
+select t2.title from film as t1 join address as t2 on t1.address_id = t2.address_id where t1.first_name = 
+select avg ( balance ) from checking 
+select population from city where city_name = 
+select state from representative group by state having count ( * ) >= 2 
+select t1.state from college as t1 join tryout as t2 on t1.cname = t2.cname where t2.decision = 
+"select t2.emp_fname , t1.prof_office from employee as t1 join enroll as t2 on t1.prof_num = t2.emp_num join student as t3 on t1.emp_num = t3.emp_num join department as t4 on t4.emp_num = t3.emp_num where t4.emp_lname = "
+select count ( * ) from campuses where location = 
+selecVALUE_0 disVALUE_0incVALUE_0 VALUE_01.name from ship as VALUE_01 join ship as VALUE_02 on VALUE_01.id = VALUE_02.losVALUE_0_in_baVALUE_0VALUE_0le join locaVALUE_0ion as VALUE_03 on VALUE_03.caused_by_ship_id = VALUE_03.id where VALUE_03.name = 
+select major from student group by major having count ( * ) > VALUE_0 
+"select t2.school_code , avg ( t1.stu_gpa ) from class as t1 join professor as t2 on t1.dept_code = t2.dept_code group by t2.dept_code "
+select rank from faculty group by rank order by count ( * ) desc limit 1 
+select distinct t3.paperid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select zip_code from weather where zip_code >= VALUE_0 intersect select zip_code from events where station_id = VALUE_1 
+select count ( distinct dept_name ) from teaches 
+select count ( distinct affiliation ) from university 
+"select t2.project_id , t1.project_id from documents as t1 join documents as t2 on t1.project_id = t2.project_id group by t1.project_id having count ( * ) > VALUE_0 "
+select type from vocals as t1 join songs as t2 on t1.songid = t2.songid where title = VALUE_0 
+select t1.clubname from club as t1 join member_of_club as t2 on t1.clubid = t2.clubid join student as t3 on t2.stuid = t3.stuid where t3.fname = 
+select document_id from documents_mailed where document_id = VALUE_0 
+"select t2.product_category_code , t1.product_name from products as t1 join ref_product_categories as t2 on t1.product_category_code = t2.product_category_code where t1.product_name = VALUE_0 "
+select t2.title from movie as t1 join reviewer as t2 on t1.rid = t2.rid where t2.stars = VALUE_0 
+select distinct t1.fname from student as t1 join allergy_type as t2 on t1.stuid = t2.allergy where t2.allergytype = 
+"select decor , lastname from rooms order by baseprice desc limit 1 "
+select count ( distinct sportname ) from sportsinfo 
+"select decor , count ( * ) from rooms where bedtype = "
+select t1.pname from player as t1 join tryout as t2 on t1.pid = t2.pid join t2.decision = 
+select citation_num from publication where citation_num = 
+select distinct t1.keyphraseid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select count ( city_name ) from city 
+select count ( distinct governor ) from county where county_id in ( select county_id from election ) 
+"select tVALUE_0.line_VALUE_0 , count ( * ) from students as tVALUE_0 join student_enrolment as tVALUE_1 on tVALUE_0.student_id = tVALUE_1.student_id group by tVALUE_0.student_id having count ( * ) >= VALUE_0 "
+select t1.last_name from customers as t1 join complaints as t2 on t1.staff_id = t2.staff_id where t2.product_name = VALUE_0 
+select count ( distinct dept_address ) from class 
+select t3.title from writes as t2 join author as t1 on t2.oid = t1.oid where t1.name = 
+select stuid from participates_in intersect select stuid from student 
+"select distinct count ( t3.paperid ) , t3.year from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = "
+select course_name from students except select course_id from students 
+select supplier_id from product_suppliers where supplier_id >= VALUE_0 intersect select supplier_id from product_suppliers where supplier_id < VALUE_0 
+"select t3.supplier_name , t1.supplier_phone from suppliers as t1 join customer_orders as t2 on t1.staff_id = t2.staff_id order by t2.date_assigned_to "
+select t1.artist_name from artist as t1 join song as t2 on t1.artist_name = t2.artist_name where t2.languages = 
+"select company , count ( * ) from entrepreneur group by investor "
+select distinct t1.name from station as t1 join station as t2 on t1.id = t2.station_id where t2.zip_code = VALUE_0 
+"select max ( gradepoint ) , min ( gradepoint ) from faculty "
+select count ( distinct city ) from bank 
+"select tVALUE_0.product_name , tVALUE_0.product_id from problems as tVALUE_0 join staff as t2 on tVALUE_0.reported_by_staff_id = t2.staff_id where t2.staff_last_name = "
+"select t2.employee_name , t2.employee_name from employees as t1 join roles as t2 on t1.role_code = t2.role_code where t2.document_name = "
+select distinct location from basketball_match 
+select river_name from river where traverse = ( select max ( length ) from river ) 
+select max ( mpg ) from cars_data where cylinders = VALUE_0 and year < VALUE_0 
+"select count ( * ) , position from department where unavailable = "
+select t3.name from director as t3 join directed_by as t1 on t2.did = t1.did join movie as t3 on t3.mid = t1.msid where t2.name = 
+select t2.name from person as t1 join personfriend as t2 on t1.name = t2.friend where t2.name = 
+"select t1.activity_name , count ( * ) from faculty as t1 join student as t2 on t1.actid = t2.actid where t2.fname = "
+select distinct count ( t1.paperid ) from venue as t2 join paper as t1 on t2.venueid = t1.venueid where t2.venuename = 
+select t1.result from city as t1 join temperature as t2 on t1.city_id = t2.city_id where t2.city = 
+select location from school order by age asc 
+select sum ( revenue ) from manufacturers where headquarter = 
+select name from branch where member_id not in ( select branch_id from membership_register_branch ) 
+select t1.fname from sportsinfo as t1 join student as t2 on t1.stuid = t2.stuid where t2.fname = 
+select distinct t3.paperid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select t3.service_type_description from ref_service_types as t1 join services as t2 on t1.service_type_code = t2.service_type_code where t2.product_price > VALUE_0 
+select name from competition where competition_type = 
+select count ( * ) from weather where mean_humidity between VALUE_0 and VALUE_1 
+select count ( * ) from store 
+select count ( * ) from chip_model where wifi not in ( select chip_model from chip_model ) 
+select count ( * ) from restaurant as t1 join location as t2 on t1.id = t2.restaurant_id where t2.city_name = 
+select count ( * ) from templates where template_type_code = 
+"select customer_name , customer_name from customers as t1 join customer_orders as t2 on t1.customer_id = t2.customer_id where t2.order_status_code = "
+select type from vocals as t1 join band as t2 on t1.bandmate = t2.id where firstname = 
+select t2.name from cast as t3 join actor as t1 on t3.aid = t1.aid join movie as t2 on t3.mid = t2.msid where t2.name = 
+"select sum ( lat ) , avg ( lat ) from trip "
+select t3.email from customers as t1 join tracks as t2 on t1.customer_id = t2.customer_id join playlists as t3 on t2.playlist_id = t3.id where t3.first_name = 
+"select fname , lname from dorm where dorm_name != "
+"select t2.firstname , t1.lastname from customer as t1 join invoice as t2 on t1.customerid = t2.customerid where t1.firstname = "
+select traverse from river where river_name = 
+select count ( * ) from flights as t1 join airports as t2 on t1.destairport = t2.airportcode where t2.city = 
+select employee_id from employees except select department_id from employees where salary < VALUE_0 
+select t2.name from category as t2 join business as t1 on t2.business_id = t1.business_id where t1.name = 
+select count ( * ) from book_club 
+select count ( distinct product_type_code ) from customers 
+select date_claim_made from customers where payment_method_code = 
+select name from pilot where age > VALUE_0 order by age desc 
+select t2.pname from college as t1 join tryout as t2 on t1.pid = t2.pid where t2.decision = 
+"select t1.name , t1.name from operate_company as t1 join flight as t2 on t1.id = t2.airport_id order by t2.velocity desc "
+select t1.party from election as t1 join party as t2 on t1.party = t2.party_id where t2.party = 
+"select phone , building from faculty where building = "
+select distinct t3.paperid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select distinct artist_name from artist as t1 join song as t2 on t1.artist_name = t2.artist_name where t2.country = 
+select course_name from courses order by course_name 
+select count ( * ) from orchestra as t1 join orchestra as t2 on t1.conductor_id = t2.conductor_id where year_of_founded > VALUE_0 
+select count ( distinct t1.ssn ) from physician as t1 join prescribes as t2 on t1.employeeid = t2.physician join procedures as t3 on t3.code = t2.medication where t3.name = 
+select t1.project_details from accounts as t1 join documents_with_expenses as t2 on t1.project_id = t2.document_id where t2.budget_type_code = 
+select count ( * ) from band 
+select state_name from state where population = ( select max ( population ) from state ) 
+select t1.name from people as t1 join candidate as t2 on t1.people_id = t2.people_id order by t2.support_rate desc limit 1 
+select count ( city_name ) from city where state_name = 
+"select customer_name , date_to from customers where customer_address like "
+select project_id from documents where role_code = 
+select distinct t1.authorid from writes as t3 join author as t2 on t3.authorid = t2.authorid join writes as t4 on t4.paperid = t3.paperid join author as t1 on t4.authorid = t1.authorid where t2.authorname = 
+select role_code from project_staff order by date_from asc 
+select count ( distinct t2.title ) from publication as t2 join conference as t1 on t2.cid = t1.cid where t1.name = 
+select t1.shop_name from stock as t1 join shop as t2 on t1.shop_id = t2.shop_id group by t1.shop_id order by count ( * ) desc limit 1 
+select candidate_id from candidate_assessments order by assessment_date desc limit 1 
+"select lname , sum ( age ) from student where sex = "
+select name from employees where first_name = 
+"select t2.title , t3.year from writes as t2 join author as t1 on t2.aid = t1.aid join publication as t3 on t3.pid = t2.pid where t1.name = "
+select distinct fault_status from fault_log_parts 
+"select t1.roomname , t1.lastname from reservations as t1 join rooms as t2 on t1.code = t2.roomid where t2.maxoccupancy > VALUE_0 "
+"select count ( * ) , nationality from people group by nationality "
+"select t4.house_number , t1.name from restaurant as t1 join location as t2 on t1.id = t2.restaurant_id where t2.city_name = "
+select roomname from rooms order by baseprice 
+"select partitionid , count ( * ) from user_profiles group by f1 "
+select t1.city from city as t1 join temperature as t2 on t1.city_id = t2.city_id where t2.mar < t2.jul intersect select t3.city from city as t3 join hosting_city as t4 on t3.city_id = t4.host_city 
+select other_details from paragraphs where paragraph_text like 
+"select count ( * ) , fda_approved from enzyme group by trade_name "
+select name from procedures order by cost desc limit 1 
+"select dorm_name , gender from student where age < VALUE_0 or age < VALUE_1 "
+select count ( * ) from wedding where year = VALUE_0 
+select distinct t3.paperid from writes as t2 join author as t1 on t2.authorid = t1.authorid join paper as t3 on t2.paperid = t3.paperid where t1.authorname = 
+select firstname from list where classroom = VALUE_0 
+select t1.name from cast as t2 join actor as t1 on t2.aid = t1.aid join movie as t3 on t2.mid = t3.msid where t1.name = 
+"select year , country_code from players "
+select date from weather where max_temperature_f >= VALUE_0 
+"select t2.name , t2.name from singer_in_concert as t1 join singer as t2 on t1.singer_id = t2.singer_id "
+select name from useracct order by trust desc limit 1 
+select t2.artist_name from artist as t1 join song as t2 on t1.artist_name = t2.artist_name group by t2.artist_name having count ( * ) >= VALUE_0 
+select avg ( price ) from wine where appelation not in ( select appelation from wine where year = VALUE_0 ) 
+select t2.amenity_name from dorm as t1 join has_amenity as t2 on t1.dormid = t2.dormid where t2.dorm_name = 
+"select t2.name , t1.email from user_profiles as t1 join tweets as t2 on t1.uid = t2.f1 where t2.f1 = VALUE_0 "
+select t2.series_name from tv_channel as t1 join tv_series as t2 on t1.id = t2.channel where t2.series_name = VALUE_0 
+"select t1.first_name , t1.booking_start_date from customers as t1 join customers as t2 on t1.customer_id = t2.customer_id where t2.coupon_amount = VALUE_0 "
+"select t1.service_type_description , t2.service_type_code from ref_service_types as t1 join services as t2 on t1.service_type_code = t2.service_type_code group by t2.booking_id order by count ( * ) desc limit 1 "
+"select product_name , typical_buying_price from products where product_category_code = VALUE_0 and typical_buying_price = VALUE_1 "
+select t1.bname from bank as t1 join loan as t2 on t1.branch_id = t2.branch_id group by t1.bname 
+"select invoice_number , count ( * ) from financial_transactions group by invoice_number "
+select template_type_code from templates group by template_type_code order by count ( * ) desc limit 1 
+select distinct count ( t3.paperid ) from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select distinct t2.paperid from venue as t2 join paper as t1 on t2.venueid = t1.venueid where t1.year = VALUE_0 and t2.venuename = 
+select pilot_name from pilot group by model having count ( * ) >= 2 
+select t2.name from climber as t1 join mountain as t2 on t1.mountain_id = t2.mountain_id where t1.country = 
+"select distinct count ( t3.paperid ) , t3.year from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = "
+select count ( * ) from college where enr < VALUE_0 
+select river_name from river where traverse = 
+"select t2.name , t1.age from shop as t1 join happy_hour as t2 on t1.shop_id = t2.shop_id group by t2.shop_id having count ( * ) >= 2 "
+"select t1.student_id , t2.last_name from students as t1 join teachers as t2 on t1.student_id = t2.student_id group by t1.student_id order by count ( * ) desc limit 1 "
+select t1.name from student as t1 join takes as t2 on t1.id = t2.id group by t2.dept_name order by count ( * ) desc limit 1 
+select count ( * ) from customers 
+select organization_name from organizations order by date_formed desc limit 1 
+select name from branch where member_id not in ( select branch_id from membership_register_branch ) 
+select count ( distinct position ) from class 
+select max ( points ) from climber as t1 join mountain as t2 on t1.mountain_id = t2.mountain_id 
+select fname from student where city_code = 
+"select mid , avg ( stars ) from movie where mid not in ( select mid from rating ) "
+select avg ( access_count ) from documents 
+select distinct president_vote from voting_record 
+select result from music_festival group by result order by count ( * ) desc limit 1 
+select * from people 
+select count ( * ) from tv_channel where language = 
+"select t2.product_name , count ( * ) , t1.order_details from accounts as t1 join order_items as t2 on t1.product_id = t2.product_id group by t1.product_name "
+select count ( * ) from cars_data where cylinders > VALUE_0 
+select document_type_code from documents where document_type_name = VALUE_0 
+select student_id from student_course_attendance where course_id = VALUE_0 
+select poll_source from candidate order by oppose_rate desc limit 1 
+"select official_name , city from city order by population desc limit 1 "
+select t2.name from gymnast as t1 join people as t2 on t1.gymnast_id = t2.people_id where t2.hometown = 
+select distinct position from match_season 
+select distinct count ( distinct t2.paperid ) from paperdataset as t2 join author as t1 on t2.authorid = t1.authorid where t1.authorname = 
+"select avg ( height ) , avg ( weight ) , sex from candidate group by sex "
+select state from employees group by billing_country order by count ( * ) desc limit 1 
+select count ( distinct customer_id ) from accounts 
+select count ( * ) from visitor where age > VALUE_0 
+select grade from highschooler 
+select t2.dept_name from student as t1 join department as t2 on t1.dept_code = t2.dept_code group by t1.dept_code order by count ( * ) desc limit 1 
+select t2.name from people as t1 join candidate as t2 on t1.people_id = t2.people_id where t2.sex = 
+select author from submission where scores > VALUE_0 intersect select college from submission where scores < VALUE_1 
+select sum ( t1.lesson_time ) from lessons as t1 join customers as t2 on t1.customer_id = t2.customer_id where t2.first_name = 
+select council_tax_id from rent_arrears where cmi_cross_ref_id = 
+"select t3.house_number , t1.name from restaurant as t1 join geographic as t2 on t1.city_name = t2.city_name join location as t3 on t1.id = t3.restaurant_id where t2.region = "
+select t2.name from genres as t1 join tracks as t2 on t1.id = t2.genre_id where t1.name = 
+select t2.cell_mobile_number from students as t1 join teachers as t2 on t1.student_id = t2.student_id where t2.first_name = 
+select avg ( no_of_customers ) from bank 
+"select count ( * ) , payment_method_code from forms group by payment_method_code "
+select distinct count ( distinct t3.paperid ) from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select district_name from district order by city_area desc 
+"select classroom , count ( * ) from list group by grade "
+"select t1.first_name , t1.last_name from players as t1 join matches as t2 on t1.player_id = t2.player_id group by t1.player_id order by count ( * ) desc limit 1 "
+select count ( * ) from artist as t1 join song as t2 on t1.artist_name = t2.artist_name where t2.languages = 
+"select t1.name , t1.balance from accounts as t1 join checking as t2 on t1.custid = t2.custid join savings as t3 on t1.custid = t3.custid order by t3.balance limit 1 "
+select rid from director except select t1.name from rating as t1 join reviewer as t2 on t1.rid = t2.rid where t2.name = 
+select t2.delegate from election as tVALUE_0 join party as t2 on tVALUE_0.party_id = t2.party_id where t2.district = VALUE_0 
+"select origin , count ( * ) from flight group by origin "
+select title from film where special_features like 
+"select name , location from enzyme "
+select distinct state_name from border_info where state_name = 
+select cust_name from customer except select cust_name from customer where acc_type = 
+select name from companies where headquarters not in ( select building_id from office_locations ) 
+"select t2.house_number , t1.name from restaurant as t1 join location as t2 on t1.id = t2.restaurant_id where t2.city_name = "
+select name from actor where birth_city = 
+select t1.famous_title from artist as t1 join volume as tVALUE_0 on t1.artist_id = tVALUE_0.artist_id where tVALUE_0.weeks_on_top > VALUE_0 
+select record_company from orchestra order by year_of_work desc limit 1 
+select distinct stu_fname from student as t1 join enroll as t2 on t1.stu_num = t2.stu_num where t2.enroll_grade = 
+"select customer_name , customer_name from customers where customer_address like "
+select name from member where country = 
+"select distinct count ( t3.paperid ) , t3.year from writes as t2 join author as t1 on t2.authorid = t1.authorid join paper as t3 on t2.paperid = t3.paperid where t1.authorname = "
+"select max_page_size , count ( * ) from store group by type "
+select t2.attendance from performance as t1 join host as t2 on t1.member_id = t2.member_id where t2.nationality = VALUE_0 
+select count ( distinct t3.paperid ) from authors as t1 join authorship as t2 on t1.authid = t2.authid join papers as t3 on t2.paperid = t3.paperid where t1.name = 
+select t1.title from item as t1 join review as t2 on t1.i_id = t2.i_id group by t2.i_id order by count ( * ) desc limit 1 
+select name from people where nationality != VALUE_0 
+select count ( * ) from camera_lens where height < VALUE_0 
+select distinct count ( t3.paperid ) from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select name from scientists where ssn not in ( select t1.name from assignedto ) 
+"select t1.crs_description , t3.crs_code from class as t1 join enroll as t2 on t1.class_code = t2.emp_num join student as t3 on t2.dept_code = t3.crs_code where t1.dept_name = "
+"select t1.delegate , t2.delegate from election as t1 join election as t2 on t1.county_id = t2.party_id "
+"select main_industry , count ( * ) from company group by main_industry "
+"select winner_name , loser_name from matches order by minutes desc limit 1 "
+"select first_name , last_name from players where year = VALUE_0 "
+select count ( distinct t4.title ) from cast as t3 join actor as t1 on t3.aid = t1.aid join movie as t2 on t3.mid = t1.msid where t2.name = 
+select country from country where continent = 
+"select t2.state , t2.state from college as t1 join player as t2 on t1.pid = t2.pid where t2.decision = "
+"select t2.jan , t2.score from venue as t2 join hosting_city as t2 on t1.city_id = t2.host_city "
+select t1.name from products as t1 join manufacturers as t2 on t1.code = t2.code where t2.name = 
+select t1.name from employee as t1 join certificate as t2 on t1.eid = t2.eid where t1.name = 
+"select name , furniture_id from furniture order by market_rate "
+select avg ( t2.unitprice ) from album as t1 join track as t2 on t1.genreid = t2.genreid where t1.name = 
+select max ( t2.fastestlapspeed ) from races as t1 join results as t2 on t1.raceid = t2.raceid where t1.year = 
+select name from club order by start_year asc 
+"select t1.booking_start_date , t1.booking_start_date from apartment_bookings as t1 join apartments as t2 on t1.apt_id = t2.apt_id where t1.booking_status_code = VALUE_0 "
+"select lieutenant_governor , comptroller from party where party = "
+select date_of_birth from guests where gender_code = VALUE_0 
+select t1.address_content from addresses as t1 join customer_addresses as t2 on t1.address_id = t2.address_id where t2.city = 
+"select t1.title , avg ( t1.rating ) from item as t1 join review as t2 on t1.i_id = t2.i_id group by t2.i_id "
+select city_name from city where state_name = 
+select t1.city from city as t1 join hosting_city as t2 on t1.city_id = t2.host_city group by t2.host_city order by count ( * ) desc limit 1 
+select distinct year from paper where year = VALUE_0 group by journalid 
+"select name , opening_hours from tourist_attractions where how_to_get_there = "
+select name from artwork order by year desc 
+"select company , headquarters from people "
+select max ( amount_of_transaction ) from transactions where transaction_type_code = VALUE_0 
+select cname from college where college = 
+select name from stadium except select t1.name from swimmer as t1 join record as t2 on t1.id = t2.swimmer_id 
+select avg ( age ) from student where sex = 
+select count ( * ) from stadium 
+"select t1.fname , t3.lname from club as t1 join member_of_club as t2 on t1.clubid = t2.clubid join student as t3 on t2.stuid = t3.stuid where t1.clubname = VALUE_0 "
+select distinct t2.venueid from writes as t2 join author as t1 on t2.authorid = t1.authorid where t1.authorname = 
+select city_code from student where city_code = 
+select avg ( gross_in_dollar ) from film 
+"select company , lastname from customer where city = "
+select name from journalist where journalist_id = VALUE_0 
+select document_type_code from documents group by document_type_code order by count ( * ) desc limit 1 
+select t1.title from authors as t1 join authorship as t2 on t1.authid = t2.authid join papers as t3 on t2.paperid = t3.paperid where t1.fname = 
+"select emp_jobcode , count ( * ) from student group by class_room having count ( * ) > VALUE_0 "
+select product_name from products order by product_price desc limit 1 
+select count ( * ) from course 
+select title from movie where director = 
+select count ( * ) from course where credits > VALUE_0 
+"select min ( crime_rate ) , max ( crime_rate ) from county_public_safety "
+"select yearid , count ( * ) from hall_of_fame group by yearid "
+select distinct t2.paperid from writes as t2 join author as t1 on t2.authorid = t1.authorid where t1.authorname = 
+select t2.employee_name from employees as t1 join roles as t2 on t1.role_code = t2.role_code where t2.role_name = 
+select count ( * ) from financial_transactions 
+"select date_of_enrolment , date_of_completion from student_course_enrolment "
+select investor from entrepreneur order by money_requested desc 
+select distinct t3.paperid from writes as t3 join author as t2 on t3.authorid = t2.authorid join writes as t4 on t4.paperid = t3.paperid join author as t1 on t4.authorid = t1.authorid where t2.authorname = 
+select course_id from student_course_registrations intersect select student_id from student_course_attendance 
+select orchestra from orchestra where orchestra_id not in ( select orchestra_id from performance ) 
+select t2.name from writes as t2 join author as t1 on t2.aid = t1.aid join publication as t3 on t2.pid = t3.pid where t1.name = 
+select distinct product_name from product order by product_name 
+select count ( * ) from student as t1 join address as t2 on t1.stuid = t2.stuid join student as t3 on t3.stuid = t3.stuid where t3.fname = 
+select distinct t1 from documents where document_id = VALUE_0 
+select clublocation from club where clubname = VALUE_0 
+"select t1.name , t1.name from accounts as t1 join checking as t2 on t1.custid = t2.custid join savings as t3 on t1.custid = t3.custid order by t2.balance desc "
+select highest_point from highlow where highest_elevation = 
+select tourist_details from locations where location_name = VALUE_0 
+select t2.theme from city as t1 join farm_competition as t2 on t1.city_id = t2.host_city_id where t2.city = 
+select name from head where age > VALUE_0 
+"select sum ( salary ) , sum ( salary ) from employees where job_id = VALUE_0 "
+"select count ( * ) , number_deaths from storm where number_deaths > VALUE_0 group by region_code "
+"select sum ( crs_credit ) , dept_code from course group by dept_code "
+select count ( distinct t2.title ) from writes as t2 join author as t1 on t2.oid = t1.oid where t1.name = 
+select sum ( crs_credit ) from professor where prof_high_degree = 
+select headquarters from companies group by headquarters having count ( * ) > VALUE_0 
+select t3.name from cast as t2 join directed_by as t1 on t2.did = t1.did join movie as t3 on t3.mid = t1.msid where t2.name = 
+select t1.student_id from friend as t1 join highschooler as t2 on t1.student_id = t2.student_id group by t1.student_id having count ( * ) >= 2 
+select address_line_1 from course_authors_and_tutors where personal_name = 
+select governor from county group by governor having count ( * ) >= 2 
+"select distinct t4.citedpaperid , count ( t4.citedpaperid ) from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = "
+select cname from course group by cname having count ( * ) >= 2 
+select count ( * ) from flight where distance between VALUE_0 and VALUE_1 
+select distinct t3.name from grapes as t1 join wine as t2 on t1.grape = t2.grape where t1.name = 
+select publisher from book_club group by year having count ( * ) >= 2 
+select zip_postcode from addresses where zip_postcode = VALUE_0 
+select city_name from city where population = ( select max ( population ) from city where state_name = 
+select t2.template_type_code from ref_template_types as t1 join templates as t2 on t1.template_type_code = t2.template_id where t2.template_type_code = 
+select cell_mobile_number from students where incident_type_code = VALUE_0 
+"select max ( milliseconds ) , min ( milliseconds ) from track "
+"select order_id , count ( * ) from order_items group by order_id "
+"select t1.company , t1.representative_name from station_company as t1 join location as t2 on t1.station_id = t2.station_id where t2.market_value = VALUE_0 "
+select state_name from state where density = ( select min ( density ) from state ) 
+select count ( * ) from country as t1 join countrylanguage as t2 on t1.code = t2.countrycode where t2.language = 
+select distinct t3.paperid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select highest_point from highlow where state_name in ( select state_name from highlow where state_name = 
+select t2.title from authors as t1 join authorship as t2 on t1.authid = t2.authid join papers as t3 on t2.paperid = t3.paperid where t1.fname = 
+select distinct t3.paperid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select t2.campus from campuses as t1 join campuses as t2 on t1.id = t2.campus where t2.campus = 
+"select t2.name , t1.name from membership_register_branch as t1 join branch as t2 on t1.branch_id = t2.branch_id "
+select major from student group by major having avg ( age ) > VALUE_0 
+select sum ( total ) from employees as t1 join customers as t2 on t1.customer_id = t2.customer_id where t2.first_name = 
+"select t2.firstname , t1.lastname from list as t1 join teachers as t2 on t1.classroom = t2.classroom where t2.firstname = "
+select count ( distinct roomtype ) from appointment 
+select count ( * ) from sportsinfo where sportname = 
+select t1.title from movie as t1 join reviewer as t2 on t1.rid = t2.rid where t2.stars = VALUE_0 intersect select t1.name from rating as t1 join movie as t2 on t1.rid = t2.rid where t2.name = 
+select t1.product_name from products as t1 join customer_orders as tVALUE_0 on t1.customer_id = tVALUE_0.customer_id where order_status_code = VALUE_0 
+select t1.grant_amount from grants as t1 join documents as t2 on t1.grant_id = t2.grant_id where t2.sent_date < VALUE_1 
+select stuid from student where sex = 
+select distinct state from player 
+select t1.countryname from countries as t1 join car_makers as t2 on t1.countryid = t2.id group by t1.countryid order by count ( * ) desc limit 1 
+select fname from authors where fname like 
+select count ( * ) from csu_fees as t1 join campuses as t2 on t1.id = t2.campus where t2.campus = 
+"select t1.employee_name , t1.employee_name from employees as t1 join employees as t2 on t1.employee_id = t2.employee_id group by t2.employee_id "
+select title from albums group by label order by count ( * ) desc limit 1 
+select name from artist where artist_id not in ( select artist_id from exhibition ) 
+"select t2.emp_fname , t2.prof_office from employee as t1 join employee as t2 on t1.emp_num = t2.emp_num where t1.dept_name = "
+select count ( * ) from artist where country = 
+select distinct t3.paperid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select payment_method_code from payments group by policy_type_code order by count ( * ) desc limit 1 
+"select payment_method_code , count ( * ) from payments group by policy_type_code "
+select rank from faculty group by major order by count ( * ) desc limit 1 
+select campus from campuses where county = 
+"select t2.house_number , t1.name from restaurant as t1 join location as t2 on t1.id = t2.restaurant_id where t2.city_name = "
+select birth_country from salary where year = VALUE_0 order by salary desc 
+select t1.country from people as t1 join perpetrator as t2 on t1.people_id = t2.people_id order by t2.year 
+"select t2.attribute_name , t1.length from catalog_contents as t1 join catalog_contents_additional_attributes as t2 on t1.catalog_entry_id = t2.catalog_entry_id where t2.catalog_level_number = VALUE_0 "
+"select sum ( age ) , max ( age ) , city_code from student group by gender "
+select nickname from staff where first_name = 
+select population from city where population > 
+"select tVALUE_0.course_name , t1.date_of_completion from student_course_enrolment as t1 join student_course_enrolment as tVALUE_0 on t1.course_id = tVALUE_0.course_id where tVALUE_0.test_result = VALUE_0 "
+"select avg ( ticket_price ) , max ( ticket_price ) from exhibition where year = "
+select river_name from river where traverse = 
+"select t2.name , t1.local_authority from station as t1 join route as t2 on t1.id = t2.station_id where t2.network_name = "
+select avg ( t1.unitprice ) from album as t1 join track as t2 on t1.supportrepid = t2.employeeid where t1.name = 
+select distinct t2.paperid from writes as t2 join author as t1 on t2.authorid = t1.authorid where t1.authorname = 
+"select t1.fullname , t1.year from cars_data as t1 join model_list as t2 on t1.id = t2.id where t2.year = "
+"select name , score from appellations where price > VALUE_0 "
+select t2.dname from student as t1 join minor_in as t2 on t1.dno = t2.dno group by t2.dno order by count ( * ) desc limit 1 
+select project_details from projects where role_code = 
+select sum ( t2.customer_id ) from customers as t1 join customers as t2 on t1.customer_id = t2.customer_id where t2.customer_first_name = 
+select distinct t1.keyphraseid from paperkeyphrase as t2 join keyphrase as t1 on t2.keyphraseid = t1.keyphraseid join paper as t3 on t3.paperid = t2.paperid where t1.keyphrasename = 
+select state_name from highlow where highest_elevation = ( select max ( highest_elevation ) from highlow ) 
+"select package_option , series_name from tv_channel where hight_definition_tv = "
+select building from student group by building having count ( * ) >= VALUE_0 
+select t2.country from customers as t1 join staff as t2 on t1.customer_address_id = t2.address_id where t2.first_name = 
+select id from tv_channel except select channel from cartoon where directed_by = 
+"select t2.employee_id , t1.last_name from employees as t1 join departments as t2 on t1.department_id = t2.department_id join locations as t3 on t2.location_id = t3.location_id where t1.department_name = "
+select name from instructor where id not in ( select id from prereq ) 
+select t3.title from writes as t2 join author as t1 on t2.aid = t1.aid join publication as t3 on t2.pid = t3.pid where t1.name = 
+select * from election 
+select highest_point from highlow where highest_elevation = ( select max ( highest_elevation ) from highlow ) 
+select t1.name from physician as t1 join affiliated_with as t2 on t1.code = t2.employeeid where t1.name = 
+select t1.name from physician as t1 join trained_in as t2 on t1.employeeid = t2.physician join procedures as t3 on t3.code = t2.treatment where t1.name = 
+select location from track where track_id > VALUE_0 intersect select location from race where seating > VALUE_1 
+"select invoice_number , count ( * ) from financial_transactions group by invoice_number "
+select river_name from river where length = ( select max ( length ) from river where traverse = 
+select owner from channel order by launch 
+select count ( distinct location ) from shop 
+select t3.title from writes as t2 join author as t1 on t2.aid = t1.aid join publication as t3 on t2.pid = t3.pid where t1.name = 
+select milliseconds from tracks where email = 
+"select school_name , location from school order by budget desc limit VALUE_0 "
+"select avg ( price ) , manufacturer from products where t1 = VALUE_0 "
+"select t1.roomname , count ( * ) from reservations as t1 join rooms as t2 on t1.code = t2.roomid group by t2.decor "
+select count ( * ) from projects 
+select name from projects where hours > ( select max ( hours ) from projects ) 
+select t2.color_description from products as t1 join ref_colors as t2 on t1.color_code = t2.color_code group by t2.color_description order by count ( * ) desc limit 1 
+"select t1.service_type_code , count ( * ) from participants as t1 join services as t2 on t1.service_id = t2.participant_id group by t1.service_type_code "
+select marketing_region_code from customers except select product_id from drama_workshop_groups 
+select course_id from course where course_id = VALUE_0 intersect select course_id from section where semester = 
+select name from club where club_id not in ( select club_id from player ) 
+"select name , surfacearea from country order by population desc "
+select name from artist where artistid not in ( select artistid from album ) 
+"select t1.student_id , t2.detention_type_description from detention as t1 join students as t2 on t1.student_id = t2.teacher_id group by t2.detention_type_code order by count ( * ) desc limit 1 "
+select poll_source from candidate group by poll_source order by count ( * ) desc limit 1 
+select avg ( bedroom_count ) from apartments 
+select city_name from city where population = ( select max ( population ) from city where state_name = 
+"select order_id , count ( * ) from bookings "
+select title from cartoon 
+select name from people except select name from wedding where year = 
+"select t1.first_name , t1.last_name from third_party_companies as t1 join maintenance_contracts as t2 on t1.company_id = t2.maintenance_contract_company_id order by t2.contract_end_date desc limit 1 "
+select max from state where state_name = 
+select business_id from business where name = 
+select count ( * ) from organization where name = 
+"select t1.thing_id , t2.type_of_thing_code from things as t1 join services as t2 on t1.customer_id = t2.customer_id where t2.organization_details = VALUE_0 "
+select date_claim_made from claims where amount_settled > ( select avg ( amount_settled ) from claims ) 
+select distinct title from vocals as t1 join songs as t2 on t1.songid = t2.songid where type = 
+select count ( * ) from student 
+select river_name from river where traverse = 
+"select type , count ( * ) from ship group by type order by count ( * ) desc limit 1 "
+select t3.name from tourist_attractions as t1 join tourist_attractions as t2 on t1.tourist_attraction_id = t2.tourist_id where t2.name = 
+select t2.apt_number from apartment_bookings as t1 join apartments as t2 on t1.apt_id = t2.apt_id where t1.booking_status_code = VALUE_0 
+select sum ( snatch ) from body_builder 
+select count ( distinct t1.name ) from category as t2 join business as t1 on t2.business_id = t1.business_id where t1.name = 
+"select count ( * ) , t1.player from player as t1 join tryout as t2 on t1.pid = t2.pid group by t2.cname "
+select count ( * ) from student_tests_taken where test_result = VALUE_0 
+"select t1.problem_id , t1.problem_id from problems as t1 join product as t2 on t1.product_id = t2.product_id where t2.product_name = VALUE_0 "
+select order_id from invoices where product_id = VALUE_0 
+select count ( * ) from station 
+select avg ( number_of_hosts ) from party 
+select count ( distinct customer_id ) from accounts 
